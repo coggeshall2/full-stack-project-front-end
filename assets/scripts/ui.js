@@ -1,3 +1,5 @@
+const store = require('./store')
+
 const onIndexSuccess = function(response){
   // empty content element
   $('#content').html('')
@@ -18,6 +20,9 @@ const onIndexSuccess = function(response){
 
     // append trailHTML to content
     $('#content').append(trailHTML)
+    $('#message').text('Successfully Completed Task')
+    $('#message').css('background-color', 'green')
+    console.log('Successfully completed. Data is :', data)
   })
 }
 
@@ -34,6 +39,9 @@ const onShowSuccess = function (response) {
   `)
 
   $('#content').html(trailHTML)
+  $('#message').text('Successfully Completed Task')
+  $('#message').css('background-color', 'green')
+  console.log('Successfully run. Data is :', data)
 
   // reset form
   $('#trail-show').trigger("reset")
@@ -41,7 +49,10 @@ const onShowSuccess = function (response) {
 
 const onDestroySuccess = function(){
 
-  $('#content').html("Trail successfully deleted!")
+  $('#content').html("Book Successfully Deleted!")
+  $('#message').text('Successfully Completed Task')
+  $('#message').css('background-color', 'green')
+  console.log('Successfully run. Data is :', data)
 
   // reset form
   $('#trail-delete').trigger("reset")
@@ -49,12 +60,18 @@ const onDestroySuccess = function(){
 
 const onUpdateSuccess = function (response) {
   $('#content').html('You successfully updated the trail')
+  $('#message').text('Successfully Completed Task')
+  $('#message').css('background-color', 'green')
+  console.log('Successfully run. Data is :', data)
   // reset form
   $('#trail-update').trigger("reset")
 }
 
 const onCreateSuccess = function () {
   $('#content').html('You created a new trail!')
+  $('#message').text('Successfully Completed Task')
+  $('#message').css('background-color', 'green')
+  console.log('Successfully run. Data is :', data)
   // reset form
   $('#trail-create').trigger("reset")
 }
@@ -65,6 +82,9 @@ const onFailure = function(response){
 
   // display error to user
   $('#content').html('Something went wrong, please try again.')
+  $('#message').text('Error on submit')
+  $('#message').css('background-color', 'red')
+  console.error('Failure when command ran. Error is :', error)
 }
 
 module.exports = {
