@@ -1,5 +1,5 @@
 'use strict'
-const events = require('./trails/events')
+const events = require('./events')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 

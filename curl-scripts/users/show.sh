@@ -1,5 +1,5 @@
 #!/bin/bash
 
-curl --include --request GET "http://localhost:7165//${ID}"
+curl --include --request GET "http://localhost:4741/${ID}"
 
 echo
