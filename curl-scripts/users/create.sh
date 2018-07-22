@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl --include --request POST "https://wdi-library-api.herokuapp.com/books/" \
+curl --include --request POST "http://localhost:7165/" \
   --header "Content-type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
