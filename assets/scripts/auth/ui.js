@@ -11,7 +11,7 @@ const signUpSuccess = function (data) {
 const signUpFailure = function (error) {
   $('#message').text('Error on sign up')
   $('#message').css('background-color', 'red')
-  console.error('signUpFailure ran. Error is :', error)
+  console.log('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = function (data) {
@@ -24,7 +24,7 @@ const signInSuccess = function (data) {
 const signInFailure = function (error) {
   $('#message').text('Error on sign in')
   $('#message').css('background-color', 'red')
-  console.error('signInFailure ran. Error is :', error)
+  console.log('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = function () {
@@ -35,22 +35,23 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function (error) {
-  $('#message').text('Error on sign out')
+  $('#message').text('Error on sign Out')
   $('#message').css('background-color', 'red')
-  console.error('signOutFailure ran. Error is :', error)
+  console.log('signOutFailure ran. Error is :', error)
 }
 
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
   $('#message').css('background-color', 'green')
-  console.log('changePasswordSuccess ran and nothing was returned!')
+  console.log('changePasswordSuccess ran and nothing was returned! ')
 }
 
 const changePasswordFailure = function (error) {
   $('#message').text('Error on change password')
   $('#message').css('background-color', 'red')
-  console.error('changePasswordFailure ran. Error is :', error)
+  console.log('changePasswordFailure ran. Error is :', error)
 }
+
 
 module.exports = {
   signUpSuccess,

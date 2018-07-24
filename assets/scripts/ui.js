@@ -33,15 +33,15 @@ const onIndexSuccess = function(data){
   })
 }
 
-const onShowSuccess = function (response) {
-
+const onShowSuccess = function (data) {
+      console.table(data.trail)
   const trailHTML = (`
-    <h4>Trail Name: ${response.trails.trail_name}</h4>
-    <p>Location: ${response.trails.location}</p>
-    <p>Distance: ${response.trails.distance}</p>
-    <p>Elevation gain: ${response.trails.elevation_gain}</p>
-    <p>Trail type: ${response.trails.trail_type}</p>
-    <p>Skill level: ${response.trails.skill_level}</p>
+    <h4>Trail Name: ${trail.trail_name}</h4>
+    <p>Location: ${trail.location}</p>
+    <p>Distance: ${trail.distance}</p>
+    <p>Elevation gain: ${trail.elevation_gain}</p>
+    <p>Trail type: ${trail.trail_type}</p>
+    <p>Skill level: ${trail.skill_level}</p>
     <br>
   `)
 
@@ -65,7 +65,7 @@ const onDestroySuccess = function(){
   $('#trail-delete').trigger("reset")
 }
 
-const onUpdateSuccess = function (response) {
+const onUpdateSuccess = function (data) {
   $('#content').html('You successfully updated the trail')
   $('#message').text('Successfully Completed Task')
   $('#message').css('background-color', 'green')
@@ -83,9 +83,9 @@ const onCreateSuccess = function () {
   $('#trail-create').trigger("reset")
 }
 
-const onFailure = function(response){
+const onFailure = function(data){
   // log the error
-  console.error(response)
+  console.error(data)
 
   // display error to user
   $('#content').html('Something went wrong, please try again.')

@@ -1,9 +1,9 @@
 'use strict'
 
-const getFormFields = require(`../../lib/get-form-fields`)
+const getFormFields = require('../../../lib/get-form-fields')
 
-const api = require('./auth/api')
-const ui = require('./auth/ui')
+const api = require('./api')
+const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -15,6 +15,7 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
+
 const onSignIn = function (event) {
   event.preventDefault()
   console.log('sign in ran!')
@@ -25,6 +26,17 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const onChangePassword = function (event) {
+  event.preventDefault()
+  console.log('change password ran')
+
+  const data = getFormFields(this)
+
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
+}
+
 const onSignOut = function (event) {
   event.preventDefault()
   console.log('sign out ran')
@@ -32,16 +44,6 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
-}
-
-const onChangePassword = function (event) {
-  event.preventDefault()
-  console.log('change password ran!')
-
-  const data = getFormFields(this)
-  api.changePassword(data)
-    .then(ui.changePasswordSuccess)
-    .catch(ui.changePasswordFailure)
 }
 
 const addHandlers = () => {

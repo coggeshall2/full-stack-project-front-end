@@ -1,6 +1,8 @@
 #!/bin/bash
 
-curl --include --request POST "http://localhost:4741" \
+curl "http://localhost:4741" \
+  --include \
+  --request POST \
   --header "Content-type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{

@@ -1,5 +1,6 @@
 'use strict'
 const events = require('./events')
+const authEvents = require('./auth/events')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -8,6 +9,7 @@ const events = require('./events')
 
 $(() => {
   // your JS code goes here
+  authEvents.addHandlers()
   $('#trails-index').on('submit', events.onGetTrails)
   $('#trails-show').on('submit', events.onGetTrail)
   $('#trails-delete').on('submit', events.onDeleteTrails)
