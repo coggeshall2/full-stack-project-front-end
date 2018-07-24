@@ -1,34 +1,33 @@
 const store = require('./store')
 
-const onIndexSuccess = function(response){
+const onIndexSuccess = function(data){
   // empty content element
   $('#content').html('')
-console.log('Content cleared')
+  console.table(data.trails)
   // loop through API response data
-  response.trails.forEach(trail => {
-console.log('response from trails')
+  data.trails.forEach(trail => {
     // build HTML element with data
     const trailHTML = (`
-      <h4>Trail Name: ${response.trails.trail_name}</h4>
+      <h4>Trail Name: ${trail.trail_name}</h4>
 
-      <p>Location: ${response.trails.location}</p>
+      <p>Location: ${trail.location}</p>
 
-      <p>Distance: ${response.trails.distance}</p>
+      <p>Distance: ${trail.distance}</p>
 
-      <p>Elevation gain: ${response.trails.elevation_gain}</p>
+      <p>Elevation gain: ${trail.elevation_gain}</p>
 
-      <p>Trail type: ${response.trails.trail_type}</p>
+      <p>Trail type: ${trail.trail_type}</p>
 
-      <p>Skill level: ${response.trails.skill_level}</p>
+      <p>Skill level: ${trail.skill_level}</p>
 
       <br>
     `)
 
     // append trailHTML to content
     $('#content').append(trailHTML)
-    console.log('append to div')
+
     $('#message').text('Successfully Completed Task')
-    console.log('text success message')
+
     $('#message').css('background-color', 'green')
     console.log('Successfully completed. Data is :', data)
   })

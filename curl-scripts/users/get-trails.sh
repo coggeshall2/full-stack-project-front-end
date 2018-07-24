@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/trails/" \
+curl "http://localhost:4741/trails" \
 --include \
 --request POST \
 --header "Content-Type: application/json" \

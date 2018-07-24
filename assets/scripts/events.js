@@ -3,19 +3,17 @@ const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
 const onGetTrails = function(event){
-console.log('function called')
   // prevent default submit action
   event.preventDefault()
 
   // make API call
-  api.index()
+  api.trailIndex()
 // console.log('api call')
   // if API call is successful then
   .then(ui.onIndexSuccess)
 // console.log('onIndexSuccess')
   // if API call fails then
   .catch(ui.onError)
-console.log('onError')
 }
 
 const onGetTrail = function (event) {

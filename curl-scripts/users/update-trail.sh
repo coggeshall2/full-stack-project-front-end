@@ -7,7 +7,7 @@ curl "http://localhost:4741/${ID}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     trail: {
-      "trail_name": "'"${TNAME}"'"
+      "trail_name": "'"${TNAME}"'",
       "location": "'"${LOC}"'",
       "distance": "'"${DIST}"'",
       "elevation_gain": "'"${ELGAIN}"'",

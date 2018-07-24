@@ -1,11 +1,11 @@
 const config = require('./config')
 const store = require('./store')
 
-const index = function(){
+const trailIndex = function(){
   // make GET request to /trails
   return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/trails',
+    url: config.apiUrl + '/trails/',
+    method: 'GET'
   })
 }
 
@@ -54,7 +54,7 @@ const create = function (data) {
 }
 
 module.exports = {
-  index,
+  trailIndex,
   show,
   destroy,
   update,
