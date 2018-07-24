@@ -3,26 +3,26 @@ const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
 const onGetTrails = function(event){
-
+console.log('function called')
   // prevent default submit action
   event.preventDefault()
 
   // make API call
   api.index()
-
+// console.log('api call')
   // if API call is successful then
   .then(ui.onIndexSuccess)
-
+// console.log('onIndexSuccess')
   // if API call fails then
   .catch(ui.onError)
-
+console.log('onError')
 }
 
 const onGetTrail = function (event) {
   event.preventDefault()
 
   // create js object from user form data
-  const data = getFormFields(event.target)
+  const data = getFormFields(this)
 
   // input validation
   if (data.trail.id === '') {
@@ -40,7 +40,7 @@ const onGetTrail = function (event) {
 const onDeleteTrail = function (event) {
   event.preventDefault()
 
-  const data = getFormFields(event.target)
+  const data = getFormFields(this)
 
   // input validation
   if (data.trail.id === '') {
@@ -55,7 +55,7 @@ const onDeleteTrail = function (event) {
 
 const onUpdateTrail = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const data = getFormFields(this)
 
   // input validation
   if (data.trail.trail_name === '') {
@@ -88,7 +88,7 @@ const onUpdateTrail = function (event) {
 
 const onCreateTrail = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const data = getFormFields(this)
 
   // input validation
   if (data.trail.trail_name === '') {

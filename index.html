@@ -50,7 +50,7 @@
     </fieldset>
   </form>
 
-  <form id="trail-create" class="border">
+  <form id="trails-create" class="border">
     <fieldset>
       <legend>Create A Trail</legend>
       <input type="text" name="trail[trail_name]" placeholder="Enter Trail Name">
@@ -63,22 +63,22 @@
     </fieldset>
   </form>
 
-  <form id="trail-index" class="border">
+  <form id="trails-index" class="border">
     <fieldset>
       <legend>Get All Trails</legend>
       <input type="submit" value="Get All Trails">
     </fieldset>
   </form>
 
-  <form id="trail-show" class="border">
+  <form id="trails-show" class="border">
     <fieldset>
       <legend>Get One Trail</legend>
         <input type="text" name="trail[id]" placeholder="Enter Trail ID">
-        <input type="submit">
+        <input type="submit" value="Get Trail">
     </fieldset>
   </form>
 
-  <form id="trail-delete" class="border">
+  <form id="trails-delete" class="border">
     <fieldset>
       <legend>Delete One Trail</legend>
       <input type="text" name="trail[id]" placeholder="Enter Trail ID">
@@ -86,9 +86,10 @@
     </fieldset>
   </form>
 
-  <form id="trail-update" class="border">
+  <form id="trails-update" class="border">
     <fieldset>
       <legend>Update One Trail</legend>
+      <input type="text" name="trail[trail_id]" placeholder="Enter Trail ID">
       <input type="text" name="trail[trail_name]" placeholder="Enter Trail Name">
       <input type="text" name="trail[location]" placeholder="Enter Trail Location">
       <input type="text" name="trail[distance]" placeholder="Enter Trail Distance">

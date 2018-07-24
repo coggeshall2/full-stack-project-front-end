@@ -3,24 +3,32 @@ const store = require('./store')
 const onIndexSuccess = function(response){
   // empty content element
   $('#content').html('')
-
+console.log('Content cleared')
   // loop through API response data
   response.trails.forEach(trail => {
-
+console.log('response from trails')
     // build HTML element with data
     const trailHTML = (`
-      <h4>Trail Name: ${response.trail.trail_name}</h4>
-      <p>Location: ${response.trail.location}</p>
-      <p>Distance: ${response.trail.distance}</p>
-      <p>Elevation gain: ${response.trail.elevation_gain}</p>
-      <p>Trail type: ${response.trail.trail_type}</p>
-      <p>Skill level: ${response.trail.skill_level}</p>
+      <h4>Trail Name: ${response.trails.trail_name}</h4>
+
+      <p>Location: ${response.trails.location}</p>
+
+      <p>Distance: ${response.trails.distance}</p>
+
+      <p>Elevation gain: ${response.trails.elevation_gain}</p>
+
+      <p>Trail type: ${response.trails.trail_type}</p>
+
+      <p>Skill level: ${response.trails.skill_level}</p>
+
       <br>
     `)
 
     // append trailHTML to content
     $('#content').append(trailHTML)
+    console.log('append to div')
     $('#message').text('Successfully Completed Task')
+    console.log('text success message')
     $('#message').css('background-color', 'green')
     console.log('Successfully completed. Data is :', data)
   })
@@ -29,12 +37,12 @@ const onIndexSuccess = function(response){
 const onShowSuccess = function (response) {
 
   const trailHTML = (`
-    <h4>Trail Name: ${response.trail.trail_name}</h4>
-    <p>Location: ${response.trail.location}</p>
-    <p>Distance: ${response.trail.distance}</p>
-    <p>Elevation gain: ${response.trail.elevation_gain}</p>
-    <p>Trail type: ${response.trail.trail_type}</p>
-    <p>Skill level: ${response.trail.skill_level}</p>
+    <h4>Trail Name: ${response.trails.trail_name}</h4>
+    <p>Location: ${response.trails.location}</p>
+    <p>Distance: ${response.trails.distance}</p>
+    <p>Elevation gain: ${response.trails.elevation_gain}</p>
+    <p>Trail type: ${response.trails.trail_type}</p>
+    <p>Skill level: ${response.trails.skill_level}</p>
     <br>
   `)
 

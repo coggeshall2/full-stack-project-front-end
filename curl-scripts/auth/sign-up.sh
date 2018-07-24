@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:7165/sign-up" \
+curl "http://localhost:4741/sign-up" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
@@ -8,7 +8,7 @@ curl "http://localhost:7165/sign-up" \
     "credentials": {
       "email": "'"${EMAIL}"'",
       "password": "'"${PASSWORD}"'",
-      "password_confirmation": "'"${PASSWORDCONF}"'"
+      "password_confirmation": "'"${PASSWORD}"'"
     }
   }'
 
