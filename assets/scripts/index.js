@@ -10,7 +10,7 @@ const authEvents = require('./auth/events')
 $(() => {
   // your JS code goes here
   authEvents.addHandlers()
-  $('#trails-index').on('submit', events.onGetTrails)
+  $('#trails-index').on('submit', events.onTrailsIndex)
   $('#trails-show').on('submit', events.onGetTrail)
   $('#trails-delete').on('submit', events.onDeleteTrails)
   $('#trails-update').on('submit', events.onUpdateTrails)

@@ -1,7 +1,8 @@
 const config = require('./config')
 const store = require('./store')
 
-const index = function(){
+const trailsIndex = function(){
+  console.log(store)
   // make GET request to /trails
   return $.ajax({
     url: config.apiUrl + '/trails/',
@@ -9,58 +10,64 @@ const index = function(){
   })
 }
 
-const show = function (data) {
+const getTrail = function (data) {
     console.log('data is ', data)
+    console.log(store)
   return $.ajax({
     url: config.apiUrl + '/trails/' + data.trail.id,
     method: 'GET',
-    // headers:{
-    //   Authorization: 'Token token=' + store.user.token
-    // },
-    // data
-  })
-}
-
-const destroy = function (data) {
-  console.log('data is ', data)
-  return $.ajax({
-    url: config.apiUrl + '/trails/' + data.trail.id,
-    method: 'DELETE',
-    // headers:{
-    //   Authorization: 'Token token=' + store.user.token
-    // },
-    // data
-  })
-}
-
-const update = function (data) {
-  console.log('data is ', data)
-  return $.ajax({
-    url: config.apiUrl + '/trails/' + data.trail.id,
-    method: 'PATCH',
-    // headers:{
-    //   Authorization: 'Token token=' + store.user.token
-    // },
-    // data
-  })
-}
-
-const create = function (data) {
-  console.log('data is ', data)
-  return $.ajax({
-    url: config.apiUrl + '/trails',
-    method: 'POST',
     headers:{
-      Authorization: 'Token token=' + user.token
+      Authorization: 'Token token=' + store.user.token
     },
     data
   })
 }
 
+const destroyTrail = function (data) {
+  console.log('data is ', data)
+  console.log(store)
+  return $.ajax({
+    url: config.apiUrl + '/trails/' + data.trail.id,
+    method: 'DELETE',
+    headers:{
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const updateTrail = function (data) {
+  console.log('data is ', data)
+  console.log(store)
+  return $.ajax({
+    url: config.apiUrl + '/trails/' + data.trail.id,
+    method: 'POST',
+    headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data
+      // data: data
+    })
+  }
+
+const createTrail = function (data) {
+  console.log('data is ', data)
+  console.log(store)
+  return $.ajax({
+    url: config.apiUrl + '/trails',
+    method: 'POST',
+    headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data
+      // data: data
+    })
+  }
+
 module.exports = {
-  index,
-  show,
-  destroy,
-  update,
-  create
+  trailsIndex,
+  getTrail,
+  destroyTrail,
+  updateTrail,
+  createTrail
 }
