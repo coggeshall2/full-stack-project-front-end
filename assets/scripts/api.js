@@ -26,8 +26,10 @@ const getTrail = function (data) {
 const destroyTrail = function (data) {
   console.log('data is ', data)
   console.log(store)
+  console.log(data.trail.id)
   return $.ajax({
     url: config.apiUrl + '/trails/' + data.trail.id,
+
     method: 'DELETE',
     headers:{
       Authorization: 'Token token=' + store.user.token
@@ -40,8 +42,8 @@ const updateTrail = function (data) {
   console.log('data is ', data)
   console.log(store)
   return $.ajax({
-    url: config.apiUrl + '/trails/' + data.trail.id,
-    method: 'POST',
+    url: config.apiUrl + '/trails/' + data.trail.trail_id,
+    method: 'PATCH',
     headers: {
         Authorization: 'Token token=' + store.user.token
       },

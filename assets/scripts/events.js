@@ -1,4 +1,4 @@
-const store = require('./store')
+// const store = require('./store')
 const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
@@ -21,7 +21,7 @@ const onGetTrail = function (event) {
   event.preventDefault()
 
   // create js object from user form data
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
 
   // input validation
   if (data.trail.id === '') {
@@ -39,7 +39,7 @@ const onGetTrail = function (event) {
 const onDestroyTrail = function (event) {
   event.preventDefault()
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
 
   // input validation
   if (data.trail.id === '') {
@@ -56,12 +56,12 @@ const onUpdateTrail = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   // input validation
-  if (data.trail.trail_name === '') {
+  if (data.trail.id === '') {
+    $('#content').html('<p>ID is required</p>')
+  } else if (data.trail.trail_name === '') {
     $('#content').html('<p>Trail name is required</p>')
   } else if (data.trail.location === '') {
     $('#content').html('<p>Location is required</p>')
-  } else if (data.trail.id === '') {
-    $('#content').html('<p>ID is required</p>')
   } else if (data.trail.distance === '') {
     $('#content').html('<p>Distance is required</p>')
   } else if (data.trail.elevation_gain === '') {

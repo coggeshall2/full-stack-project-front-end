@@ -9,6 +9,7 @@ const onIndexSuccess = function(data){
     // build HTML element with data
     const trailHTML = (`
       <h4>Trail Name: ${trail.trail_name}</h4>
+      <p>Trail ID: ${trail.id}</p>
       <p>Location: ${trail.location}</p>
       <p>Distance: ${trail.distance}</p>
       <p>Elevation gain: ${trail.elevation_gain}</p>
@@ -49,9 +50,9 @@ const onGetSuccess = function (data) {
   $('#trails-show').trigger("reset")
 
 
-const onDestroySuccess = function (data){
+const onDestroySuccess = function (){
 
-  $('#content').html("Book Successfully Deleted!")
+  $('#content').html("Trail Successfully Deleted!")
   $('#message').text('Successfully Completed Task')
   $('#message').css('background-color', 'green')
   console.log('Successfully run. Data is :', data)
@@ -61,12 +62,24 @@ const onDestroySuccess = function (data){
 }
 
 const onUpdateSuccess = function (data) {
-  $('#content').html('You successfully updated the trail')
-  $('#message').text('Successfully Completed Task')
-  $('#message').css('background-color', 'green')
-  console.log('Successfully run. Data is :', data)
-  // reset form
-  // $('#trails-update').trigger("reset")
+  $('#content').html('')
+// console.table(data.trails)
+// loop through API response data
+// build HTML element with data
+const trailHTML = (`
+  <h4>Trail Name: ${data.trail.trail_name}</h4>
+  <p>Location: ${data.trail.location}</p>
+  <p>Distance: ${data.trail.distance}</p>
+  <p>Elevation gain: ${data.trail.elevation_gain}</p>
+  <p>Trail type: ${data.trail.trail_type}</p>
+  <p>Skill level: ${data.trail.skill_level}</p>
+  <br>
+`)
+// append trailHTML to content
+$('#content').append(trailHTML)
+$('#message').text('Successfully Completed Task')
+$('#message').css('background-color', 'green')
+console.log('Successfully completed. Data is :', data)
 }
 
 const onCreateSuccess = function (data) {
