@@ -3,7 +3,7 @@ const store = require('./store')
 const onIndexSuccess = function(data){
   // empty content element
   $('#content').html('')
-  console.table(data.trails)
+  // console.table(data.trails)
   // loop through API response data
   data.trails.forEach(trail => {
     // build HTML element with data
@@ -34,7 +34,7 @@ const onIndexSuccess = function(data){
 }
 
 const onShowSuccess = function (data) {
-      console.table(data.trail)
+      // console.table(data.trail)
   const trailHTML = (`
     <h4>Trail Name: ${trail.trail_name}</h4>
     <p>Location: ${trail.location}</p>
@@ -51,7 +51,7 @@ const onShowSuccess = function (data) {
   console.log('Successfully run. Data is :', data)
 
   // reset form
-  $('#trail-show').trigger("reset")
+  $('#trails-show').trigger("reset")
 }
 
 const onDestroySuccess = function(){
@@ -62,7 +62,7 @@ const onDestroySuccess = function(){
   console.log('Successfully run. Data is :', data)
 
   // reset form
-  $('#trail-delete').trigger("reset")
+  $('#trails-delete').trigger("reset")
 }
 
 const onUpdateSuccess = function (data) {
@@ -71,7 +71,7 @@ const onUpdateSuccess = function (data) {
   $('#message').css('background-color', 'green')
   console.log('Successfully run. Data is :', data)
   // reset form
-  $('#trail-update').trigger("reset")
+  $('#trails-update').trigger("reset")
 }
 
 const onCreateSuccess = function () {
@@ -80,7 +80,7 @@ const onCreateSuccess = function () {
   $('#message').css('background-color', 'green')
   console.log('Successfully run. Data is :', data)
   // reset form
-  $('#trail-create').trigger("reset")
+  $('#trails-create').trigger("reset")
 }
 
 const onFailure = function(data){

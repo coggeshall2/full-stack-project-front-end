@@ -5,9 +5,9 @@ const getFormFields = require('../../lib/get-form-fields.js')
 const onGetTrails = function(event){
   // prevent default submit action
   event.preventDefault()
-
+  console.log('get trails ran')
   // make API call
-  api.trailIndex()
+  api.index()
 // console.log('api call')
   // if API call is successful then
   .then(ui.onIndexSuccess)
@@ -116,6 +116,8 @@ const onCreateTrail = function (event) {
       .catch(ui.onError)
   }
 }
+
+
 
 module.exports = {
   onGetTrails,
