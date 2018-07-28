@@ -19,8 +19,8 @@ const onIndexSuccess = function(data){
     `)
     // append trailHTML to content
     $('#content').append(trailHTML)
-    $('#message').text('Successfully Completed Task')
-    $('#message').css('background-color', 'green')
+    $('#trails-index-message').text('Successfully Completed Task')
+    $('#trails-index-message').css('background-color', 'green')
     console.log('Successfully completed. Data is :', data)
   })
 }
@@ -41,8 +41,8 @@ const onGetSuccess = function (data) {
         `)
         // append trailHTML to content
         $('#content').append(trailHTML)
-        $('#message').text('Successfully Completed Task')
-        $('#message').css('background-color', 'green')
+        $('#trails-show-message').text('Successfully Completed Task')
+        $('#trails-show-message').css('background-color', 'green')
         console.log('Successfully completed. Data is :', data)
     }
 
@@ -53,8 +53,8 @@ const onGetSuccess = function (data) {
 const onDestroySuccess = function (){
 
   $('#content').html("Trail Successfully Deleted!")
-  $('#message').text('Successfully Completed Task')
-  $('#message').css('background-color', 'green')
+  $('#trails-delete-message').text('Successfully Completed Task')
+  $('#trails-delete-message').css('background-color', 'green')
   console.log('Successfully run. Data is :', data)
 
   // reset form
@@ -77,15 +77,15 @@ const trailHTML = (`
 `)
 // append trailHTML to content
 $('#content').append(trailHTML)
-$('#message').text('Successfully Completed Task')
-$('#message').css('background-color', 'green')
+$('#trails-update-message').text('Successfully Completed Task')
+$('#trails-update-message').css('background-color', 'green')
 console.log('Successfully completed. Data is :', data)
 }
 
 const onCreateSuccess = function (data) {
   $('#content').html('You created a new trail!')
-  $('#message').text('Successfully Completed Task')
-  $('#message').css('background-color', 'green')
+  $('#trails-create-message').text('Successfully Completed Task')
+  $('#trails-create-message').css('background-color', 'green')
   console.log('Successfully run. Data is :', data)
   // reset form
   $('#trails-create').trigger("reset")
@@ -97,8 +97,8 @@ const onFailure = function(data){
 
   // display error to user
   $('#content').html('Something went wrong, please try again.')
-  $('#message').text('Error on submit')
-  $('#message').css('background-color', 'red')
+  $('#content').text('Error on submit')
+  $('#content').css('background-color', 'red')
   console.error('Failure when command ran. Error is :', error)
 }
 
