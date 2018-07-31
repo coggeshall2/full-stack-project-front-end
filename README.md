@@ -7,6 +7,8 @@ Page Application for the web that would allow a user to login with authenticatio
 credentials and handle all CRUD actions on a Rails API that I created with generated scaffold
 commands.  My user stories for this project were:
 
+![Serenity Trails Logger](user_stories.txt)
+
 -A user needs to create a new account
 -A user needs to login
 -A user needs view all their trails
@@ -24,6 +26,9 @@ In addition to these user stories, some of the project requirements were:
 - Must make frequent, cohesive commits dating back to the first day of building the app.
 - Must create this README and document the process and technologies used
 - Must use jQuery for DOM manipulation and AJAX for interacting with the provided API
+
+## Wireframe
+![Serenity Trails Logger Wireframe](Wireframe_1.jpg, Wireframe_2.jpg, Wireframe_3.jpg)
 
 ## Technologies Used
 
