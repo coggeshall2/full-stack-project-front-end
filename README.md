@@ -38,7 +38,11 @@ I used HTML5 to build the basic structure of the app and CSS3 to style.
 Javascript is used to build the form fields, send AJAX calls and jQuery is used to interact with the DOM and update the view
 
 ## Wireframe
-![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_1.jpg),(https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_2.jpg),(https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_3.jpg)
+![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_1.jpg)
+
+![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_2.jpg)
+
+![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_3.jpg)
 
 ## Updates
 I am working on creating a better UI that is styled with imagery and eventually connecting to a 3rd party API allowing for a search of all trails within their database.
