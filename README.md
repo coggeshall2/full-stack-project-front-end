@@ -38,7 +38,7 @@ I used HTML5 to build the basic structure of the app and CSS3 to style.
 Javascript is used to build the form fields, send AJAX calls and jQuery is used to interact with the DOM and update the view
 
 ## Updates
-I have been working on a feature to let a second player join a game, and I have it mostly working, but it has quite a few bugs.  So in the future I plan to update and work on that as well as smooth out the player vs. computer feature.
+I am working on creating a better UI that is styled with imagery and eventually connecting to a 3rd party API allowing for a search of all trails within their database.
 
 
 <!-- [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
