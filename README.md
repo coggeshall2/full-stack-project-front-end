@@ -7,15 +7,15 @@ Page Application for the web that would allow a user to login with authenticatio
 credentials and handle all CRUD actions on a Rails API that I created with generated scaffold
 commands.  My user stories for this project were:
 
--A user needs to create a new account
--A user needs to login
--A user needs view all their trails
--A user needs to search for a trail
--A user needs to update a trail
--A user needs to create a new trail
--A user needs to delete a trail
--A user needs to change their password
--A user needs to logout
+- A user needs to create a new account
+- A user needs to login
+- A user needs view all their trails
+- A user needs to search for a trail
+- A user needs to update a trail
+- A user needs to create a new trail
+- A user needs to delete a trail
+- A user needs to change their password
+- A user needs to logout
 
 
 In addition to these user stories, some of the project requirements were:
