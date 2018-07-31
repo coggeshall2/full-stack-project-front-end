@@ -1,0 +1,11 @@
+User stories
+
+-A user needs to create a new account
+-A user needs to login
+-A user needs view all their trails
+-A user needs to search for a trail
+-A user needs to update a trail
+-A user needs to create a new trail
+-A user needs to delete a trail
+-A user needs to change their password
+-A user needs to logout

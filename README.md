@@ -1,4 +1,47 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# WDI-03 Providence Project \#2 - Serenity Trails Logger
+
+## Overview
+
+For my second project at General Assembly I was tasked with creating a full stack Single
+Page Application for the web that would allow a user to login with authentication
+credentials and handle all CRUD actions on a Rails API that I created with generated scaffold
+commands.  My user stories for this project were:
+
+-A user needs to create a new account
+-A user needs to login
+-A user needs view all their trails
+-A user needs to search for a trail
+-A user needs to update a trail
+-A user needs to create a new trail
+-A user needs to delete a trail
+-A user needs to change their password
+-A user needs to logout
+
+
+In addition to these user stories, some of the project requirements were:
+
+- The app must be deployed on Github pages.
+- Must make frequent, cohesive commits dating back to the first day of building the app.
+- Must create this README and document the process and technologies used
+- Must use jQuery for DOM manipulation and AJAX for interacting with the provided API
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- jQuery
+- Google Fonts
+
+I used HTML5 to build the basic structure of the app and CSS3 to style.
+
+Javascript is used to build the form fields, send AJAX calls and jQuery is used to interact with the DOM and update the view
+
+## Updates
+I have been working on a feature to let a second player join a game, and I have it mostly working, but it has quite a few bugs.  So in the future I plan to update and work on that as well as smooth out the player vs. computer feature.
+
+
+<!-- [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # browser-template
 
@@ -72,4 +115,4 @@ Developers should run these often!
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
-# full-stack-project-front-end
+# full-stack-project-front-end -->
