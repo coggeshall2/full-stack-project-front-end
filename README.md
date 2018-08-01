@@ -46,3 +46,6 @@ Javascript is used to build the form fields, send AJAX calls and jQuery is used 
 
 ## Updates
 I am working on creating a better UI that is styled with imagery and eventually connecting to a 3rd party API allowing for a search of all trails within their database.
+
+Link to the backend of my project:
+https://github.com/coggeshall2/full_stack_project_rails_api
