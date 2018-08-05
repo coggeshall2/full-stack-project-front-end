@@ -1,2 +1,89 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+body {
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    background-color: tan;
+    color: #A04000;
+    text-shadow: 2px 2px 4px #111;
+}
+
+a {
+    color: #bbb;
+}
+main {
+    min-height: 600px;
+}
+
+h1 {
+    padding-bottom: 10px;
+    font-size: 72px;
+    color: #A04000;
+}
+h4 {
+  padding-bottom: 10px;
+  font-size: 40px;
+  color: #A04000;
+}
+.signInUp {
+    height: 75%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #A04000;
+}
+#sign-up {
+    padding: 20px;
+}
+#sign-in {
+    padding: 20px;
+}
+.userInfo {
+    display: none;
+    padding: 15px;
+    background-color: #A04000;
+}
+#sign-out {
+    display: inline;
+}
+#change-password {
+    display: none;
+}
+
+.userButtons {
+   display: none;
+}
+
+.button {
+    margin: 0 5px;
+    background-color: #EB984E;
+    border: none;
+    color: #A04000;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.buttons {
+    margin: 20px 5px 5px 5px;
+    padding-bottom: 20px;
+}
+
+#change-password {
+    margin: 5px;
+    color: #A04000;
+}
+#changedPassword {
+    margin-top: 10px;
+    height: 15%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 24px;
+}
+
+#trail-info {
+    display: none;
+}

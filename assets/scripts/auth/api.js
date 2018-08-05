@@ -17,6 +17,7 @@ const signIn = function (data) {
     method: 'POST',
     data
   })
+  console.log('data is ', data)
 }
 const changePassword = function (data) {
   console.log('data is ', data)

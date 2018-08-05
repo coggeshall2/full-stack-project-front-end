@@ -6,6 +6,7 @@ const signUpSuccess = function (data) {
 
   $('#sign-up-message').text('Signed up successfully')
   $('#sign-up-message').css('background-color', 'green')
+    $('#sign-up-message').css('display', 'block')
   console.log('signUpSuccess ran. Data is :', data)
     $('#sign-up').trigger('reset')
 }
@@ -21,6 +22,8 @@ const signInSuccess = function (data) {
   $('#sign-in-message').text('Signed in successfully')
   $('#sign-in-message').css('background-color', 'green')
   
+  $('.userButtons').css('display', 'block')
+  $('.signInUp').css('display', 'none')
   console.log('signInSuccess ran. Data is :', data)
   $('#sign-in').trigger('reset')
     // console.log(store)
@@ -35,9 +38,10 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#sign-out-message').text('Signed out successfully')
   $('#sign-out-message').css('background-color', 'green')
-  console.log('signOutSuccess ran and nothing was returned!')
-  $('#sign-out').trigger('reset')
-    store.user = null
+  $('.signInUp').css('display', 'block')
+  $('.userButtons').css('display', 'none')
+  $('.userInfo').css('display', 'none')
+  store.user = null
 }
 
 const signOutFailure = function (error) {
@@ -49,6 +53,8 @@ const signOutFailure = function (error) {
 const changePasswordSuccess = function () {
   $('#change-password-message').text('Changed password successfully')
   $('#change-password-message').css('background-color', 'green')
+  $('#change-password').css('display', 'none')
+
   console.log('changePasswordSuccess ran and nothing was returned! ')
   $('#change-password').trigger('reset')
 }
