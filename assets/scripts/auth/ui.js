@@ -3,66 +3,72 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-
-  $('#sign-up-message').text('Signed up successfully')
-  $('#sign-up-message').css('background-color', 'green')
-    $('#sign-up-message').css('display', 'block')
-  console.log('signUpSuccess ran. Data is :', data)
-    $('#sign-up').trigger('reset')
+  $('#messages').text('Signed up successfully')
+  $('#messages').css('background-color', 'green')
+  $('#messages').fadeOut(10000)
+  $('#signUp').css('display', 'none')
+  // console.log('signUpSuccess ran. Data is :', data)
+  $('#sign-up').trigger('reset')
 }
 
 const signUpFailure = function (error) {
-  $('#sign-up-message').text('Error on sign up')
-  $('#sign-up-message').css('background-color', 'red')
-  console.log('signUpFailure ran. Error is :', error)
+  $('#messages').text('Error on sign up')
+  $('#messages').css('background-color', 'red')
+  $('#messages').fadeOut(10000)
+  // console.log('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = function (data) {
-  store.user = data.user
-  $('#sign-in-message').text('Signed in successfully')
-  $('#sign-in-message').css('background-color', 'green')
-  
+  $('#messages').text('Signed in successfully')
+  $('#messages').css('background-color', 'green')
+  $('#messages').fadeOut(10000)
+  $('#signUp').css('display', 'none')
+  $('#signIn').css('display', 'none')
   $('.userButtons').css('display', 'block')
-  $('.signInUp').css('display', 'none')
-  console.log('signInSuccess ran. Data is :', data)
+  store.user = data.user
   $('#sign-in').trigger('reset')
-    // console.log(store)
+  // console.log('signInSuccess ran. Data is :', data)
 }
 
 const signInFailure = function (error) {
-  $('#sign-in-message').text('Error on sign in')
-  $('#sign-in-message').css('background-color', 'red')
-  console.log('signInFailure ran. Error is :', error)
+  $('#messages').text('Error on sign in')
+  $('#messages').css('background-color', 'red')
+  $('#messages').fadeOut(10000)
+  // console.log('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = function () {
-  $('#sign-out-message').text('Signed out successfully')
-  $('#sign-out-message').css('background-color', 'green')
-  $('.signInUp').css('display', 'block')
+  $('#messages').text('Signed out successfully')
+  $('#messages').css('background-color', 'green')
+  $('#messages').fadeOut(10000)
   $('.userButtons').css('display', 'none')
   $('.userInfo').css('display', 'none')
+  $('#trail-info').css('display', 'none')
+  $('#signUp').css('display', 'block')
+  $('#signIn').css('display', 'block')
+  $('.userInfo').trigger('reset')
   store.user = null
 }
 
 const signOutFailure = function (error) {
-  $('#sign-out-message').text('Error on sign Out')
-  $('#sign-out-message').css('background-color', 'red')
-  console.log('signOutFailure ran. Error is :', error)
+  $('#messages').text('Error on sign Out')
+  $('#messages').css('background-color', 'red')
+  $('#messages').fadeOut(10000)
+  // console.log('signOutFailure ran. Error is :', error)
 }
 
 const changePasswordSuccess = function () {
   $('#change-password-message').text('Changed password successfully')
   $('#change-password-message').css('background-color', 'green')
-  $('#change-password').css('display', 'none')
-
-  console.log('changePasswordSuccess ran and nothing was returned! ')
+  $('#change-password-message').fadeOut(10000)
   $('#change-password').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
   $('#change-password-message').text('Error on change password')
   $('#change-password-message').css('background-color', 'red')
-  console.log('changePasswordFailure ran. Error is :', error)
+  $('#change-password-message').fadeOut(10000)
+  // console.log('changePasswordFailure ran. Error is :', error)
 }
 
 

@@ -26,13 +26,31 @@ h4 {
   font-size: 40px;
   color: #A04000;
 }
-.signInUp {
+#signInUp {
     height: 75%;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-position: center top;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    display: block;
     color: #A04000;
 }
+
+#signUp {
+  display: block;
+}
+
+#signIn {
+  display: block;
+}
+
+#sign-up-message {
+  display: inline;
+}
+
+#sign-in-message {
+display: inline;
+}
+
 #sign-up {
     padding: 20px;
 }
@@ -48,7 +66,7 @@ h4 {
     display: inline;
 }
 #change-password {
-    display: none;
+    display: inline;
 }
 
 .userButtons {

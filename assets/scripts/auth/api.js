@@ -17,10 +17,10 @@ const signIn = function (data) {
     method: 'POST',
     data
   })
-  console.log('data is ', data)
+  // console.log('data is ', data)
 }
 const changePassword = function (data) {
-  console.log('data is ', data)
+  // console.log('data is ', data)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',

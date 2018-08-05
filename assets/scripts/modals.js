@@ -1,4 +1,17 @@
 
+// toggle register info
+// $(document).ready(function () {
+//   $('#register').click(function () {
+//     $('#signInUp').toggle()
+//   })
+// })
+
+// toggle sign-in info
+// $(document).ready(function () {
+//   $('#signinButton').click(function () {
+//     $('#sign-in-message').toggle()
+//   })
+// })
 
 // toggle user info
 $(document).ready(function () {
@@ -6,10 +19,11 @@ $(document).ready(function () {
     $('.userInfo').toggle()
   })
 })
-  // toggle change password
+
+  // toggle sign out
 $(document).ready(function () {
-  $('#changePassword').click(function () {
-    $('#change-password').toggle()
+  $('#sign-out').click(function () {
+    $('#signUp', '#signin').toggle()
   })
 })
 
