@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Serenity Trail Logger</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+       <!-- HEADER -->
+       <header >
+         <div>
+           <h1>Serenity Trails Logger</h1>
+           <h4>First time players, please sign up and then sign in</h4>
+           <div id="messages"></div>
+         </div>
+         <div id="signUp">
+           <form id="sign-up">
+             <fieldset>
+               <h2>Sign Up!</h2>
+               <div id='sign-up-message'></div>
+               <input type="email" name="credentials[email]" placeholder="Email"><br>
+               <input type="password" name="credentials[password]" placeholder="Password"><br>
+               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
+               <input type="submit" value="Sign Up!">
+             </fieldset>
+            </form>
+          </div>
+          <div id="signIn">
+          <form id="sign-in">
+            <fieldset>
+              <h2>Sign In!</h2>
+              <div id="sign-in-message"></div>
+                <input type="text" name="credentials[email]" placeholder="Email"><br>
+                <input type="password" name="credentials[password]" placeholder="Password"><br>
+                <input type="submit" value="Sign In!">
+            </fieldset>
+           </form>
+           </div>
+           <div></div>
+           <div></div>
+           <div class='userButtons'>
+             <div class='buttons'>
+             <!-- <button type="button" class="button" id="trailInfo"><a href="#trail-info"></a>Trails Info</button>
+             <button type="button" class="button" id="seeInfo"><a href=".userInfo"></a>See User Info</button> -->
+             <button class = 'button' id='trailInfo'>Trails Info</button>
+             <button class = 'button' id='seeInfo'>See User Info</button>
+             </div>
+           </div>
+<!-- Hidden Divs -->
+           <div id="trail-info">
+             <form id="trails-create" class="border">
+               <fieldset>
+                 <div id="trails-create-message"></div>
+                    <legend>Create A Trail</legend>
+                    <input type="text" name="trail[trail_name]" placeholder="Enter Trail Name">
+                    <input type="text" name="trail[location]" placeholder="Enter Trail Location">
+                    <input type="text" name="trail[distance]" placeholder="Enter Trail Distance">
+                    <input type="text" name="trail[elevation_gain]" placeholder="Enter Trail Elevation Gain">
+                    <input type="text" name="trail[trail_type]" placeholder="Enter Trail Type">
+                    <input type="text" name="trail[skill_level]" placeholder="Enter Trail Skill Level">
+                    <input type="submit" value="Create Trail">
+                  </fieldset>
+                </form>
+                <form id="trails-index" class="border">
+                  <fieldset>
+                    <div id="trails-index-message"></div>
+                    <legend>Get All Trails</legend>
+                    <input type="submit" value="Get All Trails">
+                  </fieldset>
+                </form>
+                <form id="trails-show" class="border">
+                  <fieldset>
+                    <div id="trails-show-message"></div>
+                    <legend>Get One Trail</legend>
+                      <input type="text" name="trail[id]" placeholder="Enter Trail ID">
+                      <input type="submit" value="Get Trail">
+                  </fieldset>
+                </form>
+                <form id="trails-delete" class="border">
+                  <fieldset>
+                    <div id="trails-delete-message"></div>
+                    <legend>Delete One Trail</legend>
+                    <input type="text" name="trail[id]" placeholder="Enter Trail ID">
+                    <input type="submit" value="Delete Trail">
+                  </fieldset>
+                </form>
+                <form id="trails-update" class="border">
+                  <fieldset>
+                    <div id="trails-update-message"></div>
+                    <legend>Update One Trail</legend>
+                    <input type="text" name="trail[trail_id]" placeholder="Enter Trail ID">
+                    <input type="text" name="trail[trail_name]" placeholder="Enter Trail Name">
+                    <input type="text" name="trail[location]" placeholder="Enter Trail Location">
+                    <input type="text" name="trail[distance]" placeholder="Enter Trail Distance">
+                    <input type="text" name="trail[elevation_gain]" placeholder="Enter Trail Elevation Gain">
+                    <input type="text" name="trail[trail_type]" placeholder="Enter Trail Type">
+                    <input type="text" name="trail[skill_level]" placeholder="Enter Trail Skill Level">
+                    <input type="submit" value="Update Trail">
+                  </fieldset>
+                </form>
+                <div id="content"></div>
+              </div>
+        <!-- End Hidden Divs -->
+        <!-- User Info -->
+              <div class='userInfo'>
+              <form id="change-password" class="border">
+                <fieldset>
+                  <h3>Change Password</h3>
+                  <div id="change-password-message"></div>
+                  <input type="password" name="passwords[old]" placeholder="Old Password"><br>
+                  <input type="password" name="passwords[new]" placeholder="New Password"><br><br>
+                  <input type="submit" value="Change Password">
+                </fieldset>
+              </form>
+              <div id="changedPassword"></div>
+              <form id="sign-out">
+              <div id="sign-out-message"></div>
+                <input type="submit" class='button' id="signOut" value="Sign Out!">
+              </form>
+            </div>
+       <!-- End User info -->
+  </body>
+</html>
